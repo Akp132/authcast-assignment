@@ -1,0 +1,111 @@
+Here’s a clean and professional **README.md** for your project.
+
+---
+
+# 🌍 Earthquake API Service
+
+A minimal backend service that wraps the USGS Earthquake API with added features like **caching**, **rate limiting**, and **HTML-rendered endpoints**.
+
+---
+
+## 📚 Features
+
+* ✅ Fetch and display recent earthquake data.
+* ✅ Filter results by date and magnitude.
+* ✅ View detailed earthquake event information.
+* ✅ In-memory **caching** to reduce redundant API calls.
+* ✅ **Rate limiting** to prevent API abuse.
+* ✅ Simple **HTML UI** for quick access via browser.
+* ✅ Load testing using `autocannon`.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd earthquake-service
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+PORT=3000
+RATE_LIMIT_WINDOW=60       # Time window in seconds
+RATE_LIMIT_MAX=5           # Max requests per window per IP
+CACHE_TTL=300               # Cache time-to-live in seconds
+```
+
+### 4. Run the Server
+
+```bash
+npm run dev   # Development mode with auto-reload
+npm start     # Production mode
+```
+
+---
+
+## 📖 API Endpoints
+
+| Endpoint                                                              | Description                         |
+| --------------------------------------------------------------------- | ----------------------------------- |
+| `/`                                                                   | Landing Page                        |
+| `/earthquakes`                                                        | List recent earthquakes (HTML view) |
+| `/earthquakes?starttime=YYYY-MM-DD&endtime=YYYY-MM-DD&minmagnitude=X` | Filter earthquakes                  |
+| `/earthquakes/:id`                                                    | Detailed view of a specific event   |
+
+---
+
+## 📋 Example Usage
+
+* [View All Recent Earthquakes](http://localhost:3000/earthquakes)
+* [Filtered Query Example](http://localhost:3000/earthquakes?starttime=2025-05-01&endtime=2025-05-10&minmagnitude=5)
+* [View Earthquake by ID](http://localhost:3000/earthquakes/ci41156296) *(Replace with a real event ID)*
+
+---
+
+## 📈 Load Testing
+
+```bash
+npm run loadtest
+```
+
+* Simulates 60 concurrent users for 20 seconds.
+* Helps validate caching and rate limiting effectiveness.
+
+---
+
+## 📦 Scripts
+
+| Command            | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| `npm start`        | Start server in production mode                     |
+| `npm run dev`      | Start server in development mode (with auto-reload) |
+| `npm run loadtest` | Run load test on `/earthquakes` endpoint            |
+
+---
+
+## 🎬 Demo Recording
+
+[Authcast Demo Link](#) *(Add your recorded video link here)*
+
+---
+
+## 👨‍💻 Author
+
+* **Akshay**
+* [LinkedIn](#) *(Optional)*
+
+---
+
+Do you want me to include **screenshots** in the README as well for a more visually appealing submission? 😊
