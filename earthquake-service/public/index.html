@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌍 Earthquake API Service</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background: #f4f4f4; color: #333; }
+    h1 { color: #222; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+    .endpoint { margin: 20px 0; }
+    a { text-decoration: none; color: #0066cc; }
+    footer { margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <h1>🌍 Earthquake API Backend</h1>
+  <p>Welcome! Use the following endpoints:</p>
+
+  <div class="endpoint">
+    <h3>📚 Endpoints</h3>
+    <ul>
+      <li><code>GET /earthquakes</code> – <a href="/earthquakes">View All Recent Earthquakes</a></li>
+      <li><code>GET /earthquakes?starttime=YYYY-MM-DD&endtime=YYYY-MM-DD&minmagnitude=X</code> – Example: 
+        <a href="/earthquakes?starttime=2025-05-01&endtime=2025-05-10&minmagnitude=5">Filtered Earthquakes</a>
+      </li>
+      <li><code>GET /earthquakes/:id</code> – Example: 
+        <a href="/earthquakes/ci41156296">View Earthquake by ID</a>
+      </li>
+    </ul>
+  </div>
+
+  <footer>Made with ❤️ for Authcast Assignment.</footer>
+</body>
+</html>
